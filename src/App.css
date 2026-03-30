@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #eef2f3, #f9f9f9);
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* LAYOUT */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 20%;
+  background: #ffffff;
+  border-right: 1px solid #eee;
+  padding: 20px;
+}
+
+.filter-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.filter-item {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+/* MAIN */
+.main-content {
+  width: 80%;
+  padding: 20px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* SEARCH + SORT */
+.top-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+.sort-select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* IMAGE */
+.card-image {
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* PRICE */
+.card-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4facfe;
+}
+
+/* STATUS */
+.status-text {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
